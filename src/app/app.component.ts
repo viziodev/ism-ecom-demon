@@ -1,13 +1,30 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import {RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { ClientsComponent } from './pages/clients/clients.component';
+import { CommandesComponent } from './pages/commandes/commandes.component';
+
+
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,ClientsComponent,CommandesComponent
+    ,RouterLink,RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+  
+  }
   title = 'ism-ecom';
+ 
+
+
+
+
+
+  
+
 }
